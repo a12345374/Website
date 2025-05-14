@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hong Kong University (HKU)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f6f1 url('https://www.transparenttextures.com/patterns/graphy.png');
+      color: #893b2d;
+    }
+
+
+    header {
+      background-color: #893b2d;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #d6e2f0;
+    }
+
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+
+    .card {
+      background-color: #fff;
+      padding: 2rem;
+      border-left: 6px solid #893b2d;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+
+    .card h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #893b2d;
+      margin-bottom: 0.5rem;
+    }
+
+
+    .card p, .card li {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+
+    .card ul {
+      padding-left: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #893b2d;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+
+    @media (max-width: 768px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <header>
+    <h1>Hong Kong University (HKU)</h1>
+    <p>Explore academic excellence at one of Asia's top institutions</p>
+  </header>
+
+
+  <div class="container">
+    <div class="info-grid">
+
+
+      <div class="image-container">
+        <img src="hku_img2.jpg" alt="HKU Building 1" />
+        <img src="hku_img3.jpg" alt="HKU Campus View" />
+      </div>
+
+
+      <div class="card">
+        <h2>University Overview</h2>
+        <p><strong>Location:</strong> Pok Fu Lam, Hong Kong</p>
+        <p><strong>QS Global Ranking:</strong> #17</p>
+
+
+        <h3>Top Majors</h3>
+        <ul>
+          <li>Medicine and Health Sciences</li>
+          <li>Law</li>
+          <li>Architecture and Urban Planning</li>
+          <li>Business and Economics</li>
+        </ul>
+
+
+        <p><strong>Student Composition:</strong> Local – 51%, International – 49%</p>
+
+
+        <h3>Programs & Opportunities</h3>
+        <p>
+          Exchange programs, internships, summer schools, and global experiences prepare students for international careers and leadership roles.
+        </p>
+
+
+        <h3>Fun Facts</h3>
+        <ul>
+          <li>HKU is the oldest university in Hong Kong, founded in 1911.</li>
+          <li>Over 160 student exchange partners worldwide.</li>
+          <li>HKU’s libraries hold more than 2.3 million books.</li>
+          <li>Motto: <em>"Sapientia et Virtus"</em> (Wisdom and Virtue).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    &copy; 2025 Hong Kong University | Designed for academic purposes
+  </div>
+
+
+  <script>
+    const images = document.querySelectorAll(".image-container img");
+    images.forEach((img, i) => {
+      img.style.opacity = 0;
+      img.style.transform = "translateY(20px)";
+      setTimeout(() => {
+        img.style.transition = "all 1s ease";
+        img.style.opacity = 1;
+        img.style.transform = "translateY(0)";
+      }, 300 * (i + 1));
+    });
+  </script>
+
+
+</body>
+</html>
+
+

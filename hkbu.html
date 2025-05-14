@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hong Kong Baptist University (HKBU)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f6f1 url('https://www.transparenttextures.com/patterns/graphy.png');
+      color: #887e14;
+    }
+
+    header {
+      background-color: #887e14;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #d6e2f0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 2rem;
+      border-left: 6px solid #887e14;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #887e14;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p, .card li {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .card ul {
+      padding-left: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #887e14;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hong Kong Baptist University (HKBU)</h1>
+    <p>Innovative learning with a strong liberal arts foundation</p>
+  </header>
+
+  <div class="container">
+    <div class="info-grid">
+
+      <div class="image-container">
+        <img src="hkbu_img2.jpg" alt="HKBU Campus Building" />
+        <img src="hkbu_img3.jpg" alt="HKBU Campus View" />
+      </div>
+
+      <div class="card">
+        <h2>University Overview</h2>
+        <p><strong>Location:</strong> Kowloon Tong, Hong Kong</p>
+        <p><strong>QS Global Ranking:</strong> #36</p>
+
+        <h3>Top Majors</h3>
+        <ul>
+          <li>Communication and Journalism</li>
+          <li>Film, Media, and Visual Arts</li>
+          <li>Business and Marketing</li>
+          <li>Chinese Medicine</li>
+        </ul>
+
+        <p><strong>Student Population:</strong> Approx. 11,600 students</p>
+
+        <h3>Programs & Opportunities</h3>
+        <p>
+          HKBU provides exchange programs with over 300 partner institutions, internship opportunities across Asia and beyond, service-learning courses, and interdisciplinary research programs that prepare students to lead and innovate in diverse global fields.
+        </p>
+
+        <h3>Fun Facts</h3>
+        <ul>
+          <li>HKBU was established in 1956 as a Christian liberal arts university.</li>
+          <li>The Academy of Film is one of the top film schools in Asia.</li>
+          <li>HKBU is home to the largest Chinese Medicine Teaching and Research division in Hong Kong.</li>
+          <li>The school emphasizes Whole Person Education, combining academic learning with ethical and civic development.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Hong Kong Baptist University | Designed for academic purposes
+  </div>
+
+  <script>
+    const images = document.querySelectorAll(".image-container img");
+    images.forEach((img, i) => {
+      img.style.opacity = 0;
+      img.style.transform = "translateY(20px)";
+      setTimeout(() => {
+        img.style.transition = "all 1s ease";
+        img.style.opacity = 1;
+        img.style.transform = "translateY(0)";
+      }, 300 * (i + 1));
+    });
+  </script>
+
+</body>
+</html>
